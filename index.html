@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAÍZ · Del campo a tu casa</title>
+  <meta name="description" content="RAÍZ es el marketplace del sector primario español. RAÍZ Partners, para profesionales del campo, está en fase de pruebas; la tienda para particulares llegará próximamente.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#014222">
+  <link rel="icon" href="favicon.ico">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="RAÍZ">
+  <meta property="og:title" content="RAÍZ · Del campo a tu casa">
+  <meta property="og:description" content="El marketplace del sector primario español. RAÍZ Partners, para profesionales del campo, ya está en fase de pruebas.">
+  <meta property="og:url" content="https://raizmarket.es">
+  <meta property="og:image" content="https://raizmarket.es/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root {
+      --verde: #014222; --verde2: #0b5a31; --oliva: #769914; --oliva2: #5D830F;
+      --ocre: #A27523; --crema: #F4EFE0; --tinta: #1b2a1f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--crema); color: var(--tinta); line-height: 1.55;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+    .serif { font-family: Georgia, "Times New Roman", serif; }
+    .hero {
+      color: var(--crema); text-align: center; padding: 56px 24px 130px;
+      background:
+        radial-gradient(1200px 420px at 50% 125%, rgba(118, 153, 20, .38), transparent 70%),
+        linear-gradient(165deg, var(--verde) 0%, var(--verde2) 100%);
+    }
+    .logo {
+      display: inline-flex; align-items: center; justify-content: center;
+      background: var(--crema); border-radius: 18px; padding: 12px 22px; min-height: 64px;
+    }
+    .logo img { height: 56px; width: auto; display: block; }
+    .wordmark {
+      font-family: Georgia, "Times New Roman", serif; font-weight: 700;
+      font-size: 34px; letter-spacing: .06em; color: var(--verde);
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif; font-weight: 700;
+      font-size: clamp(34px, 6vw, 56px); line-height: 1.1; margin: 36px 0 14px;
+    }
+    .sub { max-width: 640px; margin: 0 auto; font-size: clamp(16px, 2.2vw, 19px); opacity: .92; }
+
+    .cards {
+      max-width: 980px; margin: -76px auto 0; padding: 0 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .card {
+      background: #fff; border-radius: 22px; padding: 32px; display: flex; flex-direction: column;
+      box-shadow: 0 12px 40px rgba(1, 66, 34, .14); border-top: 6px solid var(--oliva);
+    }
+    .card.pronto { border-top-color: var(--ocre); }
+    .badge {
+      align-self: flex-start; font-size: 12px; font-weight: 700; letter-spacing: .04em;
+      text-transform: uppercase; padding: 5px 12px; border-radius: 999px;
+    }
+    .badge.pruebas { background: #e8f1cf; color: #4a6610; }
+    .badge.pronto { background: #f3e6c8; color: #7b5513; }
+    .card h2 {
+      font-family: Georgia, "Times New Roman", serif; font-size: 30px;
+      margin: 16px 0 2px; color: var(--verde);
+    }
+    .para { font-weight: 600; color: var(--oliva2); margin: 0 0 14px; }
+    .card p { margin: 0 0 14px; }
+    .card ul { margin: 0 0 24px; padding: 0; list-style: none; }
+    .card li { padding-left: 28px; position: relative; margin-bottom: 8px; }
+    .card li::before { content: "✓"; position: absolute; left: 0; color: var(--oliva2); font-weight: 700; }
+    .accion { margin-top: auto; }
+    .btn {
+      display: inline-block; padding: 14px 26px; border-radius: 12px;
+      font-weight: 700; font-size: 16px; text-decoration: none; text-align: center;
+    }
+    .btn-main { background: var(--verde); color: var(--crema); transition: background .2s, transform .2s; }
+    .btn-main:hover { background: var(--oliva2); transform: translateY(-1px); }
+    .btn-main:focus-visible { outline: 3px solid var(--ocre); outline-offset: 3px; }
+    .btn-off { background: #e9e3cf; color: #8a8369; cursor: not-allowed; }
+    .nota { font-size: 13px; color: #6b7a6e; margin: 10px 0 0; }
+
+    .que { max-width: 760px; margin: 64px auto 0; padding: 0 24px; text-align: center; }
+    .que h3 { font-family: Georgia, "Times New Roman", serif; font-size: 28px; color: var(--verde); margin: 0 0 12px; }
+    .pilares {
+      max-width: 980px; margin: 36px auto 0; padding: 0 24px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    }
+    .pilar { background: rgba(255, 255, 255, .65); border: 1px solid #e2dbc3; border-radius: 16px; padding: 20px; }
+    .pilar .ico { font-size: 26px; }
+    .pilar h4 { margin: 8px 0 6px; font-size: 17px; color: var(--verde); }
+    .pilar p { margin: 0; font-size: 15px; }
+
+    footer { margin-top: 72px; background: var(--verde); color: #cfdcc9; text-align: center; padding: 32px 24px; font-size: 14px; }
+    footer a { color: var(--crema); }
+    footer .aviso { margin: 10px 0 0; opacity: .8; }
+
+    @media (max-width: 760px) {
+      .cards { grid-template-columns: 1fr; margin-top: -64px; }
+      .pilares { grid-template-columns: 1fr; }
+      .hero { padding-bottom: 110px; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="logo">
+      <img src="logo.png" alt="RAÍZ" onerror="this.parentNode.innerHTML='<span class=wordmark>RAÍZ</span>'">
+    </div>
+    <h1>Del campo a tu casa.</h1>
+    <p class="sub">
+      RAÍZ es el marketplace del sector primario español: un lugar donde quienes trabajan el campo
+      se encuentran con quienes necesitan lo que producen.
+    </p>
+  </header>
+
+  <main>
+    <section class="cards" aria-label="Elige dónde entrar">
+
+      <article class="card">
+        <span class="badge pruebas">En fase de pruebas</span>
+        <h2>RAÍZ Partners</h2>
+        <p class="para">Para profesionales del sector</p>
+        <p>
+          El punto de encuentro de quienes trabajan el campo: ganaderos y agricultores,
+          industria transformadora, proveedores de maquinaria e insumos, transportistas agrícolas
+          y profesionales como veterinarios, ingenieros y gestores.
+        </p>
+        <ul>
+          <li>Vendedores verificados</li>
+          <li>Chat interno para tratar directamente</li>
+          <li>Transporte especializado para animales y cargas agrícolas</li>
+        </ul>
+        <div class="accion">
+          <a class="btn btn-main" href="https://partners.raizmarket.es">Entrar en Partners →</a>
+          <p class="nota">Regístrate o inicia sesión con tu perfil profesional.</p>
+        </div>
+      </article>
+
+      <article class="card pronto">
+        <span class="badge pronto">Próximamente</span>
+        <h2>RAÍZ</h2>
+        <p class="para">Para tu casa</p>
+        <p>
+          Producto del campo, de origen conocido, de productores reales hasta tu mesa.
+          Estamos preparando la tienda para particulares.
+        </p>
+        <ul>
+          <li>Productos con el origen a la vista</li>
+          <li>Pedidos directos a quien los produce</li>
+        </ul>
+        <div class="accion">
+          <span class="btn btn-off" role="link" aria-disabled="true">Disponible próximamente</span>
+          <p class="nota">Te avisaremos cuando abra.</p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="que">
+      <h3>¿Qué es RAÍZ?</h3>
+      <p>
+        RAÍZ nace para acercar a quienes producen con quienes compran: un lugar donde el sector
+        primario español se conoce, se contacta y trabaja de forma directa y transparente.
+        Dos puertas, una misma idea: <strong>RAÍZ Partners</strong> para el trabajo entre profesionales,
+        y <strong>RAÍZ</strong> para llevar el campo a casa.
+      </p>
+    </section>
+
+    <section class="pilares">
+      <div class="pilar">
+        <div class="ico">🌾</div>
+        <h4>Del productor</h4>
+        <p>Ganaderos y agricultores publican lo que producen, con sus datos y su trazabilidad.</p>
+      </div>
+      <div class="pilar">
+        <div class="ico">🛡️</div>
+        <h4>Con verificación</h4>
+        <p>Los vendedores envían su documentación y la revisamos antes de que puedan publicar.</p>
+      </div>
+      <div class="pilar">
+        <div class="ico">🚛</div>
+        <h4>Con transporte del campo</h4>
+        <p>Transportistas agrícolas especializados presentan su precio para cada trabajo.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      © 2026 RAÍZ ·
+      <a href="mailto:hola@raizmarket.es">hola@raizmarket.es</a> ·
+      <a href="https://partners.raizmarket.es/privacidad">Política de privacidad</a>
+    </div>
+    <p class="aviso">RAÍZ está en construcción: pueden producirse cambios mientras mejoramos la plataforma.</p>
+  </footer>
+
+</body>
+</html>
